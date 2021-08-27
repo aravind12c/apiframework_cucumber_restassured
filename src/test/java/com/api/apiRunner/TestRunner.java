@@ -2,8 +2,6 @@ package com.api.apiRunner;
 
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import org.testng.Assert;
-
 import com.api.apiObjects.APIObjects;
 import com.api.apiUtilities.PropertyUtils;
 
@@ -13,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 import io.restassured.response.Response;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/FeatureFile/PetAPI.feature", glue = {
+@CucumberOptions(features = "src/test/resources/FeatureFile/API.feature", glue = {
 		"classpath:com.api.stepDefinitions", "classpath:com.api.apiInitiation" }, plugin = {
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, tags = "@api")
 public class TestRunner {

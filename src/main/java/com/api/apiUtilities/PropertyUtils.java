@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertyUtils {
+	
+	/**
+	 * Property Utils is used to get the value based on Key Parameter from Config Properties file.
+	 */
 	 
 	 public static String configProperty(String key) {
 		 FileReader reader;

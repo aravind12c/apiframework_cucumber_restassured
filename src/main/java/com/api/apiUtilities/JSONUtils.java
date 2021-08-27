@@ -6,7 +6,10 @@ import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JSONUtils {
-
+	
+	/**
+	 * JSONUtils will convert the String to Map and returning the JSON in Map format 
+	 */
 	@SuppressWarnings("unchecked")
 	public static Map<String, String> jsonReader(String json) {
 		ObjectMapper mapper = new ObjectMapper();
@@ -18,4 +21,5 @@ public class JSONUtils {
 		}
 		return map;
 	}
+	
 }

@@ -16,22 +16,18 @@ public class APIObjects {
 
 	public static void setBaseURL() {
 		RestAssured.baseURI = BASE_URL;
-
 	}
 
 	public static void setRestRequestforJson(String contentType, String jsonObject) {
 		request = RestAssured.given().header("Content-Type", contentType).body(jsonObject);
-
 	}
 
 	public static void setRestRequestforFile(String contentType, File image) {
 		request = RestAssured.given().header("Content-Type", contentType)
 				.multiPart("additionalMetadata", "Uploaded Image Successfully").multiPart("file", image);
-
 	}
 
 	public static Response apiMethods(String method, String endpoint) {
-
 		if (method.equalsIgnoreCase("Get")) {
 			response = request.get(endpoint);
 		} else if (method.equalsIgnoreCase("Post")) {
@@ -41,8 +37,6 @@ public class APIObjects {
 		} else if (method.equalsIgnoreCase("Delete")) {
 			response = request.delete(endpoint);
 		}
-
 		return response;
-
 	}
 }

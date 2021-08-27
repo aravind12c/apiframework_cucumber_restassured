@@ -14,7 +14,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 
-public class PetAPIStepDefinition {
+public class APIStepDefinition {
 
 	public static Response response;
 
